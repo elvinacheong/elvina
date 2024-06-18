@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;800&display=swap" rel="stylesheet">
+    <title>Portfolio - Elvina Cheong</title>
+</head>
+<body>
+    
+    <!-- Cursor -->
+    <div class="cursor">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <script src="js/cursor.js"></script>
+
+    <!-- Background Animation -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <!-- Home -->
+    <div class="home">
+        <div class="home-content">
+            <h1>Elvina Cheong</h1>
+            <p>Aspiring UI/UX Designer</p>
+        </div>
+
+        <!-- Navbar -->
+        <nav id="navbar">
+            <ul id="menu">
+                <li><a href="#aboutme">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contactme">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="js/navbar.js"></script>
+
+    <!-- About -->
+    <div class="about" id="aboutme">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <div class="abtme-text">
+                My name is Elvina Cheong, a third-year student<br>
+                 pursuing a Diploma in Digital Design and<br>
+                  Development in Republic Polytechnic. During my time <br>
+                  in Republic Polytechnic, I have developed a strong <br>
+                  interest in UI/UX design,as well as front-end <br>
+                  development. Having obtained a proficient set of <br>
+                  skills, I am passionate about creating digital <br>
+                  experiences that are both visually apealing and 
+                  <br>functional.
+                  <div class="button-cv">
+                    <a href="docs/Resume_1.pdf" download>
+                        <button class="dl-cv"> Download Resume</button>
+                    </a>
+                  </div>
+            </div>
+            <div class="abtme-image">
+                <img class="abtme-face" src="images/me1.jpg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="projects" id="projects">
+        <h1>My Recent Projects</h1>
+
+        <ul class="project-filter">
+            <li class="list project-filter-active" data-filter="all">All Projects</li>
+            <li class="list" data-filter="design">Design</li>
+            <li class="list" data-filter="fe">Front-End</li>
+        </ul>
+
+        <div class="projects-box">
+
+            <!-- Design -->
+            <div class="project-card design">
+                <img src="images/design/t252_ga.png " alt="">
+                <h3>Graded Assignment - Personal Web Pages</h3>
+                <p>Adobe Illustrator, Adobe Photoshop</p>
+                <div class="projects-btn" onclick="togglePopup()">View Details</div>
+            </div>            
+            <div class="project-card design">
+                <img src="images/design/c218_ga.png " alt="">
+                <h3>Graded Assignment - Mobile Portfolio Prototype</h3>
+                <p>Adobe XD</p>
+                <div class="projects-btn" onclick="togglePopup2()">View Details</div>
+            </div>
+            <div class="project-card design">
+                <img src="images/design/c218_l07.png " alt="">
+                <h3>À Deux - Restaurant Website Prototype</h3>
+                <p>Adobe XD</p>
+                <div class="projects-btn" onclick="togglePopup3()">View Details</div>
+            </div>
+            <div class="project-card design">
+                <img src="images/design/c218_l10.png " alt="">
+                <h3>MINDS - Mobile App Prototype</h3>
+                <p>Adobe XD</p>
+                <div class="projects-btn" onclick="togglePopup4()">View Details</div>
+            </div>
+
+            <!-- Front-End -->
+            <div class="project-card fe">
+                <img src="images/frontend/c219_ga.png " alt="">
+                <h3>Graded Assignment - School Library Web App</h3>    
+                <p>HTML, CSS, Bootstrap, JavaScript</p>
+                <div class="projects-btn" onclick="togglePopup5()">View Details</div>
+            </div>
+            <div class="project-card fe">
+                <img src="images/frontend/c219_l06.png " alt="">
+                <h3>SOI Learning Portal</h3>
+                <p>HTML, CSS, Bootstrap</p>
+                <div class="projects-btn" onclick="togglePopup6()">View Details</div>
+            </div>
+        </div>
+
+        <!-- Popup -->
+        <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <img src="images/design/t252_ga.png" alt="">
+                <h2>Graded Assignment - Personal Web Pages</h2>
+                <p>2023<br>Adobe Illustrator, Adobe Photoshop</p>
+                <br>
+                <p>I was tasked to create a personal web page for my graded assignment in Y1S2. I used Adobe Illustrator to create the pages. I
+                    decided to go for something minimal yet intriguing. I used shades of blue on top of a black background, which creates a subtle contrast.
+                    The main focus of the page is my logo, which I created using Adobe Photoshop. I wanted to go for a 3D metallic-chrome look, so I
+                    applied effects such as bevel and emboss, and inner shadow. I also added a curve layer to really achieve the look that I wanted.  
+                </p>
+                <br>
+                <a href="docs/03 Personal Webpages Style Guide Template.pdf" download>
+                    <button class="dl-proj">View Project</button>
+                </a>
+            </div>
+        </div>
+        <div class="popup" id="popup-2">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup2()">&times;</div>
+                <img src="images/design/c218_ga.png" alt="">
+                <h2>Graded Assignment - Mobile Portfolio Prototype</h2>
+                <p>2023<br>Adobe XD</p>
+                <br>
+                <p>For my graded assignment in Y2S1, I was tasked to create a mobile portfolio prototype using Adobe XD. My mobile portfolio takes 
+                    inspiration from the Hong Kong film director, Wong Kar Wai. I wanted to create a portfolio that incorporates his use of bold and saturated 
+                    colours in his films. Using the split complementary colour scheme, I used different hues of red, green, and blue to create the same 
+                    captivating and artistic touch to my portfolio.
+                </p>
+                <br>
+                <a href="https://xd.adobe.com/view/b6643aa1-d88b-44d4-b14f-313d22ae4281-e337/" target="_blank">
+                    <button class="dl-proj">View Project</button>
+                </a>
+            </div>
+        </div>
+        <div class="popup" id="popup-3">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup3()">&times;</div>
+                <img src="images/design/c218_l07.png" alt="">
+                <h2>À Deux - Restaurant Website Prototype</h2>
+                <p>2023<br>Adobe XD</p>
+                <br>
+                <p>I was tasked to create a website portfolio for a restaurant using Adobe XD. As I am creating the website for a French restaurant, my overall website design 
+                    takes inspiration from the neutral colour scheme of Paris. Using an analogous colour scheme, I used shades of beige, brown, and white to reflect the colours 
+                    of the Parisian streets.
+                </p>
+                <br>
+                <a href="https://xd.adobe.com/view/a73362f0-277b-4c6f-9cab-b26a24e09d93-f260/" target="_blank">
+                    <button class="dl-proj">View Project</button>
+                </a>
+            </div>
+        </div>
+        <div class="popup" id="popup-4">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup4()">&times;</div>
+                <img src="images/design/c218_l10.png" alt="">
+                <h2>MINDS - Mobile App Prototype</h2>
+                <p>2023<br>Adobe XD</p>
+                <br>
+                <p>I was tasked to create a website for MINDS that aid in the communication and understanding of emotions for individuals with intellectual disabilities. 
+                    I used Adobe XD to create the mobile app prototype. I wanted to create a mobile app that is user-friendly and easy to navigate. I used a monochromatic 
+                    colour scheme, using different shades of blue to create a calming and soothing effect. I also used icons to represent the different emotions, making it 
+                    easier for the users to understand and navigate the app.
+                </p>
+                <br>
+                <a href="https://xd.adobe.com/view/6b60011a-b21e-40bd-9816-b70a2e6c772e-3e33/screen/5f9cc4a6-8221-46cd-bb3d-021fb4bccbd0/" target="_blank">
+                    <button class="dl-proj">View Project</button>
+                </a>
+            </div>
+        </div>
+        <div class="popup" id="popup-5">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup5()">&times;</div>
+                <img src="images/frontend/c219_ga.png" alt="">
+                <h2>Graded Assignment - School Library Web App</h2>
+                <p>2023<br>HTML, CSS, Bootstrap, JavaScript</p>
+                <br>
+                <p>For my graded assignment in Y2S2, I was tasked to create a school library web app using HTML, CSS, and JavaScript. I wanted to create a visually appealing yet 
+                    functional web app that is easy to navigate. I used mainly usded green, black, and white to create a clean and professional look. I used fullpage.js, tippy.js, 
+                    anime.js, and datatables.js to create the different functionalities of the web app.
+                </p>
+                <br>
+                <a href="https://github.com/elvinacheong/C219_GA" target="_blank">
+                    <button class="dl-proj">View Project</button>
+                </a>
+            </div>
+        </div>
+        <div class="popup" id="popup-6">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup6()">&times;</div>
+                <img src="images/frontend/c219_l06.png" alt="">
+                <h2>SOI Learning Portal</h2>
+                <p>2023<br>HTML, CSS, Bootstrap</p>
+                <br>
+                <p>I was tasked to code the home page for the SOI Learning Portal using Bootstrap. This was my first time using Bootstrap, and I found it to be a very useful tool 
+                    in creating responsive web pages.
+                </p>
+                <br>
+                <a href="https://github.com/elvinacheong/C219_L06_Assignment" target="_blank">
+                    <button class="dl-proj">View Project</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/projects.js"></script>
+    <script src="js/popup.js"></script>
+
+    <!-- Contact -->
+    <div class="contact-container" id="contactme">
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="info-text">
+                    Have any questions? I'd love to hear from you!
+                </p>
+                <div class="info">
+                    <div class="information">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+65 9235 5982</p>
+                    </div>
+                    <div class="information">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>elvinacheong@gmail.com</p>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <h3 class="title">Connect with me</h3>
+                    <p>Find me on these social platforms!</p>
+                    <br>
+                    <div class="social-icon">
+                        <a href="https://www.linkedin.com/in/elvinacheong314/">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/elvinacheong">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/elvinacheong/?next=%2F">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="c71aa1d5-93b2-4508-9ed2-0ca6fed55cb5">
+
+                    <h3 class="title">Send me a message</h3>
+                    <div class="input-container">
+                        <input type="name" name="name" class="input">
+                        <label for="">Name</label>
+                        <span>Name</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" class="input">
+                        <label for="">Email</label>
+                        <span>Email</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="subject" name="subject" class="input">
+                        <label for="">Subject</label>
+                        <span>Subject</span>
+                    </div>
+                    <div class="input-container textarea ">
+                        <textarea name="message" class="input"></textarea>
+                        <label for="">Message</label>
+                        <span>Message</span>
+                    </div>
+                    <input type="submit" value="Send" class="submitbtn">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/contact.js"></script>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 | Elvina Cheong</p>
+    </div>
+</body>
+</html>
